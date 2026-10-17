@@ -1,0 +1,6 @@
+{
+  "name": "Bannoon's Birthday Celebration",
+  "description": "A magical, interactive birthday celebration website created for Bannoon (بَنّون) featuring music, interactive cake, letters, Iraqi Arabic poetry, 3D gift box, and fireworks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --gold: #d4af37;
+    --gold-light: #fbeea4;
+    --rose: #fb7185;
+    --lavender: #c084fc;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #0d0714;
+    color: #fce7f3;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  ::selection {
+    background: rgba(244, 114, 182, 0.35);
+    color: #fff;
+  }
+}
+
+.font-arabic {
+  font-family: 'Amiri', serif;
+}
+
+.font-display {
+  font-family: 'Cinzel', serif;
+}
+
+.font-serif-luxury {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+/* 3D Box Perspective */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Shimmer & Glow Effects */
+@keyframes goldShimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF9D2 0%, #E6CA65 25%, #FFF0A3 50%, #C99E32 75%, #FFF9D2 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+.text-rose-gold-gradient {
+  background: linear-gradient(135deg, #FFE4E6 0%, #F472B6 30%, #FBBF24 70%, #FDA4AF 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 7s linear infinite;
+}
+
+/* Candle flame animations */
+@keyframes flameFlicker {
+  0%, 100% { transform: scale(1) rotate(-1deg); opacity: 0.95; }
+  25% { transform: scale(1.05, 1.1) rotate(1deg); opacity: 1; }
+  50% { transform: scale(0.95, 1.05) rotate(-2deg); opacity: 0.9; }
+  75% { transform: scale(1.03, 0.98) rotate(2deg); opacity: 1; }
+}
+
+.animate-flame {
+  animation: flameFlicker 1.2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@keyframes smokeRise {
+  0% { transform: translateY(0) scale(0.6); opacity: 0.8; }
+  50% { transform: translateY(-16px) scale(1.2) translateX(4px); opacity: 0.4; }
+  100% { transform: translateY(-32px) scale(1.8) translateX(-6px); opacity: 0; }
+}
+
+.animate-smoke {
+  animation: smokeRise 1.6s ease-out forwards;
+}
+
+/* Floating animation */
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1.5deg); }
+}
+
+.animate-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(8px) rotate(-1.5deg); }
+}
+
+.animate-float-reverse {
+  animation: floatReverse 4.5s ease-in-out infinite;
+}
+
+/* Box Wiggle */
+@keyframes boxShake {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  20% { transform: rotate(-3deg) scale(1.03); }
+  40% { transform: rotate(3deg) scale(1.03); }
+  60% { transform: rotate(-2deg) scale(1.02); }
+  80% { transform: rotate(2deg) scale(1.02); }
+}
+
+.animate-box-shake {
+  animation: boxShake 0.6s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 7, 26, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 114, 182, 0.3);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 114, 182, 0.6);
+}
